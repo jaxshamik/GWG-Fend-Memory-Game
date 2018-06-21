@@ -14,6 +14,8 @@ Once all cards are flipped a Modal will pop up shoing you number of moves, score
 
 Less than 15 moves gives you 3 stars, less than 24 moves gives you 2 stars, more than 24 moves you get 1 star.
 
+Live game at: https://jaxshamik.github.io/GWG-Fend-Memory-Game/
+
 ## Contributing
 
 This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
