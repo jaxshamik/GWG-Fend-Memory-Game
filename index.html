@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Matching Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Matching Game</h1>
+        </header>
+
+        <section class="score-panel">
+        	<ul class="stars">
+        		<li class="star"></li>
+        		<li class="star"></li>
+        		<li class="star"></li>
+        	</ul>
+        	<span class="moves">
+                0  Moves
+            </span> 
+            <span class="time">
+                 
+            </span>           
+            <div class="restart">
+        		<span class="replay"><img src="./img/replay-symbol.svg" alt=""></span>
+        	</div>
+        </section>
+
+        <ul class="deck">
+            
+        </ul>
+
+        </div>       
+        <!-- The Modal -->
+        <div id="myModal" class="modal">       
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="modal-head">
+                <p class="modal-head-content">
+                    Your Stats...
+                </p>
+            </span>
+            <ul id="stats-box">
+                <li id="score"></li>
+                <li id="moves"></li>
+                <li id="time"></li>
+            </ul>
+            <ul id="modal-replay">
+                <li>Play Again</li>
+                <li class="replay"></li>
+            </ul>
+          </div>
+        
+        </div>
+    <footer><div>Icons made by <a href="https://www.flaticon.com/authors/prettycons" title="prettycons">prettycons</a> and <a href="https://www.flaticon.com/authors/freepik" title="freepik">freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div></a></div></footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>   
+
+    <script src="js/app.js"></script>
+</body>
+</html>

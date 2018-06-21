@@ -1,0 +1,397 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+align-content: center;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 0;
+    background-image: url('../img/pattern.png'); /* Background pattern from Subtle Patterns */
+}
+    
+body {
+    font-family: 'Coda', cursive;
+}
+
+.container {
+    width: 800px;
+    display: flex;
+    background-image: url('../img/football-bg1.png'); /* Background pattern from Subtle Patterns */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+footer {
+    text-align: center;
+}
+/*
+ * Styles for the deck of cards
+ */
+.deck {
+    width: 660px;
+    min-height: 100%;
+    padding: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 3em;
+}
+
+.deck .card {
+    margin-top: 10px;
+    height: 125px;
+    width: 125px;
+    background: #2e4939;
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+    background-image: url(../img/medal.svg);
+}
+
+.deck .card.open {
+    transform: rotateY(0);
+    background: #16b401;
+    font-size: 33px;
+    cursor: default;
+    background-size: 3em;
+}
+
+.deck .card.show {
+    background: #16b401;
+    font-size: 33px;
+    cursor: default;
+    background-size: 3em;
+}
+
+.deck .card.match {
+    cursor: default;
+    background: #16b401;
+    font-size: 33px;
+    background-size: 3em;
+}
+
+.deck .card.freeze {
+	pointer-events: none;
+}
+/* The Modal (background) */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 75px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+}
+/* Modal Content */
+.modal-content {
+
+    background-color: #fefefe;
+    color: #fff;
+    text-align: center;
+    font-size: 1.2em;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 352px;
+    height: 256px;
+    background-image: url(../img/scorebd.png);
+    background-repeat: no-repeat;
+}
+.modal-head {
+    padding-bottom: 10px;
+    font-family: serif;
+    font-size: 1em;
+}
+
+.modal-head-content {
+    padding-bottom: 10px;
+    font-family: sans-serif;
+    font-size: 1.2em;
+    margin-bottom: 1px;
+    height: 20px;
+    margin-top: 4px;
+}
+#stats-box {
+    list-style-type: none;
+    font-size: .95em;
+    color: #fff;
+    font-family: "Arial Black", Gadget, sans-serif;
+    text-align: left;
+    padding-left: 14px;
+    padding-top: 22px;
+}
+
+.modal {
+    display: none;
+    width: 450;
+    height:500;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#modal-replay {
+    list-style-type: none;
+    display: inline-flex;
+    margin-left: 100px;
+    width: 300px;
+    padding-left: 1px;
+    padding-bottom: 5px;
+    margin-top: 10px;
+}
+/*
+ * Styles for the Score Panel
+ */
+#star {
+    font-size: .75em;
+    color: #fff;
+    text-decoration: none;
+}
+
+.score-panel {
+    text-align: left;
+    width: 345px;
+    margin-bottom: 10px;
+}
+
+.score-panel .stars {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+
+.score-panel .stars li {
+    list-style: none;
+    display: inline-block;
+}
+
+.score-panel .restart {
+    float: right;
+    cursor: pointer;
+}
+
+.star {
+    background-image: url('../img/star.svg');
+    height: 1.2em;
+    width: 1.2em;
+    background-repeat: no-repeat;
+}
+
+.moves {
+    font-size: 1.2em;
+    text-align: center;
+    padding-left: .6em;
+    color: #fff;
+}
+
+.time {
+    font-size: 1.2em;
+    text-align: center;
+    padding-left: .6em;
+    color: #fff;
+}
+
+.replay {
+    background-image: url(../img/replay-symbol.svg);
+    height: 22px;
+    width: 22px;
+    font-weight: 900;
+    background-repeat: no-repeat;
+    margin-left: 20px;
+    cursor: pointer;
+}
+/*Cards*/
+.football {
+    background-image: url('../img/american-football.svg');
+    height: 2.8em;
+    width: 2.8em;
+    background-repeat: no-repeat;
+}
+
+.bowling {
+    background-image: url('../img/bowling.svg');
+    height: 2.8em;
+    width: 2.8em;
+    background-repeat: no-repeat;
+}
+
+.curling {
+    background-image: url('../img/curling.svg');
+    height: 2.8em;
+    width: 2.8em;
+    background-repeat: no-repeat;
+}
+
+.puck {
+    background-image: url('../img/puck.svg');
+    height: 2.8em;
+    width: 2.8em;
+    background-repeat: no-repeat;
+}
+
+.tennis {
+    background-image: url('../img/tennis-ball.svg');
+    height: 2.8em;
+    width: 2.8em;
+    background-repeat: no-repeat;
+}
+
+.soccer {
+    background-image: url('../img/soccer.svg');
+    height: 2.8em;
+    width: 2.8em;
+    background-repeat: no-repeat;
+}
+
+.basketball {
+    background-image: url('../img/basketball-ball.svg');
+    height: 2.8em;
+    width: 2.8em;
+    background-repeat: no-repeat;
+}
+
+.badminton {
+    background-image: url('../img/badminton.svg');
+    height: 2.8em;
+    width: 2.8em;
+    background-repeat: no-repeat;
+}
+/*Responsive section*/
+@media screen and (max-width: 800px) {
+    .container {
+        width: 500px;
+        background-image: url('../img/football-bg500.png'); /* Background pattern from Subtle Patterns */
+    }
+
+    .deck {
+        width: 500px;
+    }
+
+    .deck .card {
+        height: 100px;
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    header {
+        margin-top: 120px;
+    }
+
+    .container {
+        background-image: url('../img/football-bgsm.png'); /* Background pattern from Subtle Patterns */
+        margin: 0px;
+        width: 100%;
+        height: 400px;
+    }
+
+    .deck {
+        padding: 2px 4px 100px 4px;
+        width: 300px;
+        height: 400px;
+    }
+
+    .deck .card {
+        height: 60px;
+        width: 60px;
+    }
+
+    .score-panel {
+        width: 300px;
+    }
+
+    .time {
+        font-size: 1em;
+    }
+    .moves {
+        font-size: 1em;
+    }
+    .stars {
+        margin-left: 6px;
+        margin-right: 2px;
+    }
+    .restart {
+        margin-right: 8px;
+    }
+/*Make cards smaller*/
+    .football {
+        background-image: url('../img/american-football.svg');
+        height: 1.6em;
+        width: 1.6em;
+        background-repeat: no-repeat;
+    }
+
+    .bowling {
+        background-image: url('../img/bowling.svg');
+        height: 1.6em;
+        width: 1.6em;
+        background-repeat: no-repeat;
+    }
+
+    .curling {
+        background-image: url('../img/curling.svg');
+        height: 1.6em;
+        width: 1.6em;
+        background-repeat: no-repeat;
+    }
+
+    .puck {
+        background-image: url('../img/puck.svg');
+        height: 1.6em;
+        width: 1.6em;
+        background-repeat: no-repeat;
+    }
+
+    .tennis {
+        background-image: url('../img/tennis-ball.svg');
+        height: 1.6em;
+        width: 1.6em;
+        background-repeat: no-repeat;
+    }
+
+    .soccer {
+        background-image: url('../img/soccer.svg');
+        height: 1.6em;
+        width: 1.6em;
+        background-repeat: no-repeat;
+    }
+
+    .basketball {
+        background-image: url('../img/basketball-ball.svg');
+        height: 1.6em;
+        width: 1.6em;
+        background-repeat: no-repeat;
+    }
+
+    .badminton {
+        background-image: url('../img/badminton.svg');
+        height: 1.6em;
+        width: 1.6em;
+        background-repeat: no-repeat;
+    }
+}
