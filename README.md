@@ -23,6 +23,14 @@ For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
 ## Dependencies
 Modal is inspired by the tutorial at https://www.w3schools.com/howto/howto_css_modals.asp
 
+jquery https://code.jquery.com/jquery-3.3.1.min.js
+
+Animation of cards by https://daneden.github.io/animate.css/
+
+Google fonts
+
+font awesome
+
 Card icons including front and back of cards are from  prettycons from www.flaticon.com is licensed by CC 3.0 
 https://www.flaticon.com/authors/prettycons.
 
