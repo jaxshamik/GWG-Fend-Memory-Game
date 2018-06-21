@@ -4,6 +4,7 @@
 
 * [Instructions](#instructions)
 * [Contributing](#contributing)
+* [Dependencies](#dependencies)
 
 ## Instructions
 
