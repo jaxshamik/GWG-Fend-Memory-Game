@@ -22,8 +22,11 @@ For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Dependencies
 Card icons including front and back of cards are from Prettycons https://jaxshamik.github.io/GWG-Fend-Memory-Game/
+
 Replay icon and container background, are from freepic https://www.flaticon.com/authors/freepik.
+
 Deck background and modal background are from pixabay https://pixabay.com/en/football-stadium-playing-field-ad-1428860/
+
 CC0 Creative Commons
 Free for commercial use 
 No attribution required
