@@ -21,12 +21,15 @@ This repository is the starter code for _all_ Udacity students. Therefore, we mo
 For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Dependencies
-Card icons including front and back of cards are from Prettycons https://jaxshamik.github.io/GWG-Fend-Memory-Game/
+Modal is inspired by the tutorial at https://www.w3schools.com/howto/howto_css_modals.asp
+
+Card icons including front and back of cards are from  prettycons from www.flaticon.com is licensed by CC 3.0 
+https://www.flaticon.com/authors/prettycons.
+
 
 Replay icon and container background, are from freepic https://www.flaticon.com/authors/freepik.
 
 Deck background and modal background are from pixabay https://pixabay.com/en/football-stadium-playing-field-ad-1428860/
-
 CC0 Creative Commons
 Free for commercial use 
 No attribution required
