@@ -145,7 +145,7 @@ function statsModal() {
     let finalCount = document.getElementsByClassName("moves")["0"].textContent;
     $("#moves").text(`Your final Count is ${finalCount}`);
     let finalTime = document.getElementsByClassName("time")["0"].textContent;
-    $("#time").text(finalTime);
+    $("#time").text(`Your final time is ${finalTime}`);
     console.log(finalCount);
 }
 /*
