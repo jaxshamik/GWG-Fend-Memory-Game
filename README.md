@@ -23,6 +23,7 @@ This repository is the starter code for _all_ Udacity students. Therefore, we mo
 For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Dependencies
+Timer is based on the Stackoverflow page at https://stackoverflow.com/questions/14762153/how-to-create-a-count-up-timer-in-a-text-input
 Modal is inspired by the tutorial at https://www.w3schools.com/howto/howto_css_modals.asp
 
 jquery https://code.jquery.com/jquery-3.3.1.min.js
