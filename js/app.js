@@ -106,7 +106,6 @@ function stars() {
 /* Timer
   Timer based on code at stackoveflow 
 */ https://stackoverflow.com/questions/14762153/how-to-create-a-count-up-timer-in-a-text-input
-let initTimer;
 initTimer = function() {
   let timer;
   timer = 0;
