@@ -3,8 +3,6 @@
  * Create a list that holds all of your cards
  */
 let cardArray = [];
-let timer = setInterval(totalTime, 1000);
-let startTime = new Date().getTime();
 let elapsed = '0';
 let count = 0;
 let classArray = ['badminton','badminton','football','football','bowling','bowling','puck','puck','soccer','soccer','tennis','tennis','curling','curling','basketball','basketball'];
@@ -29,6 +27,7 @@ $(".restart").click(function() {
 $(".replay").click(function() {
     window.location.reload(true);
 });
+
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
         while (currentIndex !== 0) {
@@ -103,34 +102,41 @@ function moves(){
     count++;
     $(".moves").html(`${count} Moves`);
     stars();
+    if(count == 1){
+ //Timer       
+        function totalTime() {
+            let timer = setInterval(totalTime, 1000);
+            let t = new Date().getTime() - startTime;
+            elapsed = Math.floor(t / 1000);
+            if(Math.round(elapsed) == elapsed){
+                elapsed += '.0';
+            }
+            let min = Math.floor(elapsed / 60);
+            let sec = elapsed - min * 60;
+            if(sec < 10){
+                timeSec = "0" + sec;
+            } else {
+                timeSec = sec;
+            }
+            if(min < 10){
+                timeMin = "0" + min;
+            } else {
+                timeMin = min;
+            }
+            let timeElapsed = timeMin + ":" + timeSec;
+            $(".time").html(`Time Used ${timeElapsed}`);
+        }
+        let startTime = new Date().getTime();
+            totalTime();
+    }
 }
 //Scoring function
 function stars() {
     if (count === 16 || count === 24)
     $("ul:first :last-child").remove();
 }
-//Timer 
-function totalTime() {
-    let t = new Date().getTime() - startTime;
-    elapsed = Math.floor(t / 1000);
-    if(Math.round(elapsed) == elapsed){
-        elapsed += '.0';
-    }
-    let min = Math.floor(elapsed / 60);
-    let sec = elapsed - min * 60;
-    if(sec < 10){
-        timeSec = "0" + sec;
-    } else {
-        timeSec = sec;
-    }
-    if(min < 10){
-        timeMin = "0" + min;
-    } else {
-        timeMin = min;
-    }
-    let timeElapsed = timeMin + ":" + timeSec;
-    $(".time").html(`Time Used ${timeElapsed}`);
-}
+
+
 //If all cards turned pop up Modal
 function cardsMatched() {
     let matched = document.getElementsByClassName("match");
