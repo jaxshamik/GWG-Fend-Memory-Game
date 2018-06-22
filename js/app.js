@@ -3,13 +3,8 @@
  * Create a list that holds all of your cards
  */
 let cardArray = [];
-let elapsed = '0';
 let count = 0;
 let classArray = ['badminton','badminton','football','football','bowling','bowling','puck','puck','soccer','soccer','tennis','tennis','curling','curling','basketball','basketball'];
-let min = Math.floor(elapsed / 60);
-let sec = elapsed - min * 60;
-let timeSec = sec;
-let timeMin = min;
 /*
  * Display the cards on the page
  *   - shuffle the list of cards using the provided "shuffle" method below
@@ -59,7 +54,7 @@ $("li").each(function() {
             cardsMatched();
         });
     }
-});
+})
 //Allows only 2 cards to be flipped and not closed
  function openCard() {
     if(cardArray.length === 2) {
@@ -102,47 +97,39 @@ function moves(){
     count++;
     $(".moves").html(`${count} Moves`);
     stars();
-    if(count == 1){
- //Timer       
-        function totalTime() {
-            let timer = setInterval(totalTime, 1000);
-            let t = new Date().getTime() - startTime;
-            elapsed = Math.floor(t / 1000);
-            if(Math.round(elapsed) == elapsed){
-                elapsed += '.0';
-            }
-            let min = Math.floor(elapsed / 60);
-            let sec = elapsed - min * 60;
-            if(sec < 10){
-                timeSec = "0" + sec;
-            } else {
-                timeSec = sec;
-            }
-            if(min < 10){
-                timeMin = "0" + min;
-            } else {
-                timeMin = min;
-            }
-            let timeElapsed = timeMin + ":" + timeSec;
-            $(".time").html(`Time Used ${timeElapsed}`);
-        }
-        let startTime = new Date().getTime();
-            totalTime();
-    }
 }
 //Scoring function
 function stars() {
     if (count === 16 || count === 24)
     $("ul:first :last-child").remove();
 }
-
-
+/* Timer
+  Timer based on code at stackoveflow 
+*/ https://stackoverflow.com/questions/14762153/how-to-create-a-count-up-timer-in-a-text-input
+let initTimer;
+initTimer = function() {
+  let timer;
+  timer = 0;
+  setInterval((function() {
+    let hr, minute, second, str;
+    timer++;
+    second = timer % 60;
+    minute = (timer - second) / 60 % 60;
+    hr = (timer - second - (minute * 60)) / 3600;
+    time = ('0' + minute).slice(-2) + ':' + ('0' + second).slice(-2);
+    $('.time').text(time);
+  }), 1000);
+};
+$( ".deck" ).on( "click", function( event ) {
+    initTimer();
+    $( this ).off( event );
+  });
 //If all cards turned pop up Modal
 function cardsMatched() {
     let matched = document.getElementsByClassName("match");
     matched.length;
         if  (matched.length === 16) {
-            clearInterval(timer);
+            clearInterval(initTimer);
             statsModal();
     }
 }
